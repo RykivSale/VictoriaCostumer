@@ -81,7 +81,6 @@ async def login_command(message: types.Message):
 
             await message.answer(text="Вы авторизированы, господин", reply_markup=get_admin_menu())
 
-
 @dp.message_handler(state=ClientStatesGroup.login)
 async def load_login(message: types.Message,state:FSMContext):
     async with state.proxy() as data:
